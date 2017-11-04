@@ -13,68 +13,85 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sampleRate: 44100
   _sampleInfos:
-  - _name: C2
+  - _name: 4332
     _midiCode: 36
-    _pathInResources: Piano44100/C2
+    _pathInResources: 5069616e6f34343130302f4332
     _numChannels: 1
     _samplesPerChannel: 308705
-    _guid: 6189af611ecb74fa98dfbce8dca24be1
+    _guid: 3631383961663631316563623734666139386466626365386463613234626531
     _isStreamingAsset: 0
+    _fileName: 
+    _humanReadableSize: 
     clipStatus: 0
-  - _name: B4
+  - _name: 4234
     _midiCode: 71
-    _pathInResources: Piano44100/B4
+    _pathInResources: 5069616e6f34343130302f4234
     _numChannels: 1
     _samplesPerChannel: 308705
-    _guid: 03b87b1dde9a84c05b3d280378ca6585
+    _guid: 3033623837623164646539613834633035623364323830333738636136353835
     _isStreamingAsset: 0
+    _fileName: 
+    _humanReadableSize: 
     clipStatus: 0
-  - _name: C5
+  - _name: 4335
     _midiCode: 72
-    _pathInResources: Piano44100/C5
+    _pathInResources: 5069616e6f34343130302f4335
     _numChannels: 1
     _samplesPerChannel: 308705
-    _guid: 5b920505d82c542ae898901a2b8f73a2
+    _guid: 3562393230353035643832633534326165383938393031613262386637336132
     _isStreamingAsset: 0
+    _fileName: 
+    _humanReadableSize: 
     clipStatus: 0
-  - _name: E5
+  - _name: 4535
     _midiCode: 76
-    _pathInResources: Piano44100/E5
+    _pathInResources: 5069616e6f34343130302f4535
     _numChannels: 1
     _samplesPerChannel: 308705
-    _guid: 7f3aaf566c68445aa9f366d9f979839a
+    _guid: 3766336161663536366336383434356161396633363664396639373938333961
     _isStreamingAsset: 0
+    _fileName: 
+    _humanReadableSize: 
     clipStatus: 0
-  - _name: G5
+  - _name: 4735
     _midiCode: 79
-    _pathInResources: Piano44100/G5
+    _pathInResources: 5069616e6f34343130302f4735
     _numChannels: 1
     _samplesPerChannel: 308705
-    _guid: d590e75b2887b47018a79eb420e73198
+    _guid: 6435393065373562323838376234373031386137396562343230653733313938
     _isStreamingAsset: 0
+    _fileName: 
+    _humanReadableSize: 
     clipStatus: 0
-  - _name: A5
+  - _name: 4135
     _midiCode: 81
-    _pathInResources: Piano44100/A5
+    _pathInResources: 5069616e6f34343130302f4135
     _numChannels: 1
     _samplesPerChannel: 308705
-    _guid: fdf0b55e0ff844870a8658189d67e50d
+    _guid: 6664663062353565306666383434383730613836353831383964363765353064
     _isStreamingAsset: 0
+    _fileName: 
+    _humanReadableSize: 
     clipStatus: 0
-  - _name: B5
+  - _name: 4235
     _midiCode: 83
-    _pathInResources: Piano44100/B5
+    _pathInResources: 5069616e6f34343130302f4235
     _numChannels: 1
     _samplesPerChannel: 308705
-    _guid: f1125a1ad8785480ca593fdead6d747e
+    _guid: 6631313235613161643837383534383063613539336664656164366437343765
     _isStreamingAsset: 0
+    _fileName: 
+    _humanReadableSize: 
     clipStatus: 0
-  - _name: C6
+  - _name: 4336
     _midiCode: 84
-    _pathInResources: Piano44100/C6
+    _pathInResources: 5069616e6f34343130302f4336
     _numChannels: 1
     _samplesPerChannel: 308705
-    _guid: 89063292aae2c43f88c225e46b8eeef2
+    _guid: 3839303633323932616165326334336638386332323565343662386565656632
     _isStreamingAsset: 0
+    _fileName: 
+    _humanReadableSize: 
     clipStatus: 0
   _totalUncompressedBytes: 9878560
+  _humanReadableUncompressedSize: 

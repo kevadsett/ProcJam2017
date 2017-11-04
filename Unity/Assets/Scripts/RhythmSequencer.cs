@@ -12,13 +12,14 @@ namespace ProcJam2017
 		private readonly OnSequenceFinished _sequenceFinishedAction;
 
 		private RhythmDefinition _definition;
-		private bool _loop;
 
 		private float _nextNoteTick;
 
 		private int _noteIndex;
 
-		public RhythmSequencer (RhythmDefinition definition, PlayNote playNoteAction, bool loop, OnSequenceFinished sequenceFinishedAction)
+		private bool _loop;
+
+		public RhythmSequencer (RhythmDefinition definition, PlayNote playNoteAction, OnSequenceFinished sequenceFinishedAction, bool loop = false)
 		{
 			_definition = definition;
 			_playNoteAction = playNoteAction;
@@ -32,22 +33,15 @@ namespace ProcJam2017
 			BeatManager.OnTickOccurred -= OnTickOccurred;
 		}
 
-		public void ChangeRhythm (RhythmDefinition newDefinition, bool loop, float startTick)
+		public void ChangeRhythm (RhythmDefinition newDefinition, float startTick)
 		{
-			Debug.Log ("CHANGE RHYTHM");
 			_definition = newDefinition;
-			_loop = loop;
 			_nextNoteTick = startTick;
 			_noteIndex = 0;
 		}
 
 		private void OnTickOccurred(float tick)
 		{
-			if (tick % 1 == 0)
-			{
-				_playNoteAction ();
-			}
-			Debug.Log (string.Format ("Current tick: {0}, next note at {1}", tick, _nextNoteTick));
 			if (tick == _nextNoteTick)
 			{
 				if (_noteIndex < _definition.Notes.Count)
@@ -56,8 +50,16 @@ namespace ProcJam2017
 				}
 				else
 				{
-					_sequenceFinishedAction (_nextNoteTick);
-					PlayTheNote (tick);
+					if (_loop == true)
+					{
+						_noteIndex = 0;
+						PlayTheNote (tick);
+					}
+					else
+					{
+						_sequenceFinishedAction (_nextNoteTick);
+						PlayTheNote (tick);
+					}
 				}
 			}
 		}
