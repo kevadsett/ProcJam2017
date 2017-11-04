@@ -18,7 +18,6 @@ namespace ProcJam2017
 
 		void Start()
 		{
-			NoteDatabase.Load ();
 			_sequencer = new RhythmSequencer (Rhythm, PlayNote, null, true);
 		}
 
@@ -29,7 +28,7 @@ namespace ProcJam2017
 
 		void PlayNote ()
 		{
-			AudioClip clip = NoteDatabase.GetNote (InstrumentName, Scale.NoteIds [_index]);
+			AudioClip clip = NoteDatabase.Instance.GetNote (InstrumentName, Scale.NoteIds [_index]);
 			Source.clip = clip;
 			Source.Play ();
 			_index = (_index + 1) % Scale.NoteIds.Count;

@@ -1,15 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 using UnityEngine;
 
 namespace ProcJam2017
 {
-	public static class NoteDatabase
+	public class NoteDatabase
 	{
-		private static Dictionary<string, Dictionary<int, AudioClip>> _notes;
+		private static NoteDatabase _instance;
+		public static NoteDatabase Instance
+		{
+			get
+			{
+				if (_instance == null)
+				{
+					_instance = new NoteDatabase ();
+					_instance.Load ();
+				}
+				return _instance;
+			}
+		}
 
-		public static void Load()
+		private Dictionary<string, Dictionary<int, AudioClip>> _notes;
+
+		private void Load()
 		{
 			_notes = new Dictionary<string, Dictionary<int, AudioClip>> ();
 
@@ -29,7 +42,7 @@ namespace ProcJam2017
 			}
 		}
 
-		public static AudioClip GetNote(string instrumentName, int noteId)
+		public AudioClip GetNote(string instrumentName, int noteId)
 		{
 			Dictionary<int, AudioClip> clipList;
 			if (_notes.TryGetValue (instrumentName, out clipList))
