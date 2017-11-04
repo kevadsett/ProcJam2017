@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99e071ed3c424e16bf543c19f92bf91, type: 3}
+  m_Name: PianoSoundBank
+  m_EditorClassIdentifier: 
+  _sampleRate: 44100
+  _sampleInfos:
+  - _name: C2
+    _midiCode: 36
+    _pathInResources: Piano44100/C2
+    _numChannels: 1
+    _samplesPerChannel: 308705
+    _guid: 6189af611ecb74fa98dfbce8dca24be1
+    _isStreamingAsset: 0
+    clipStatus: 0
+  - _name: B4
+    _midiCode: 71
+    _pathInResources: Piano44100/B4
+    _numChannels: 1
+    _samplesPerChannel: 308705
+    _guid: 03b87b1dde9a84c05b3d280378ca6585
+    _isStreamingAsset: 0
+    clipStatus: 0
+  - _name: C5
+    _midiCode: 72
+    _pathInResources: Piano44100/C5
+    _numChannels: 1
+    _samplesPerChannel: 308705
+    _guid: 5b920505d82c542ae898901a2b8f73a2
+    _isStreamingAsset: 0
+    clipStatus: 0
+  - _name: E5
+    _midiCode: 76
+    _pathInResources: Piano44100/E5
+    _numChannels: 1
+    _samplesPerChannel: 308705
+    _guid: 7f3aaf566c68445aa9f366d9f979839a
+    _isStreamingAsset: 0
+    clipStatus: 0
+  - _name: G5
+    _midiCode: 79
+    _pathInResources: Piano44100/G5
+    _numChannels: 1
+    _samplesPerChannel: 308705
+    _guid: d590e75b2887b47018a79eb420e73198
+    _isStreamingAsset: 0
+    clipStatus: 0
+  - _name: A5
+    _midiCode: 81
+    _pathInResources: Piano44100/A5
+    _numChannels: 1
+    _samplesPerChannel: 308705
+    _guid: fdf0b55e0ff844870a8658189d67e50d
+    _isStreamingAsset: 0
+    clipStatus: 0
+  - _name: B5
+    _midiCode: 83
+    _pathInResources: Piano44100/B5
+    _numChannels: 1
+    _samplesPerChannel: 308705
+    _guid: f1125a1ad8785480ca593fdead6d747e
+    _isStreamingAsset: 0
+    clipStatus: 0
+  - _name: C6
+    _midiCode: 84
+    _pathInResources: Piano44100/C6
+    _numChannels: 1
+    _samplesPerChannel: 308705
+    _guid: 89063292aae2c43f88c225e46b8eeef2
+    _isStreamingAsset: 0
+    clipStatus: 0
+  _totalUncompressedBytes: 9878560

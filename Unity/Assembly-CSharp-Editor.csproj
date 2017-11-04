@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{654291FD-5DA6-E1F8-AC4D-AA42B3E5336A}</ProjectGuid>
+    <ProjectGuid>{6311E6C6-0A20-383B-320B-694068DE37A5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -69,7 +69,6 @@
      <None Include="Assets\G-Audio\Scripts\Filters\Audial Manipulators - G-Audio\AboutAudial.txt" />
      <None Include="Assets\G-Audio\Examples\InitScene\InitScene_ReadMe.txt" />
      <None Include="Assets\G-Audio\Examples\_Example_05_Looper\__LooperReadme.txt" />
-     <None Include="Assets\G-Audio\__ReadMe.txt" />
      <None Include="Assets\G-Audio\NVorbis\__License.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity5.5.1p3/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -143,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{132CC8D9-9DD4-9DC6-8798-B319A303E364}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{CD8C9303-404B-FB8D-6B9B-21988D5CAC0A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

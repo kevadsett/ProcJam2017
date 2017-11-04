@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{132CC8D9-9DD4-9DC6-8798-B319A303E364}</ProjectGuid>
+    <ProjectGuid>{CD8C9303-404B-FB8D-6B9B-21988D5CAC0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -180,10 +180,11 @@
      <Compile Include="Assets\G-Audio\Scripts\StaticAndSingletons\_Classes\GATInfo.cs" />
      <Compile Include="Assets\G-Audio\Scripts\StaticAndSingletons\_Classes\GATMaths.cs" />
      <Compile Include="Assets\G-Audio\Scripts\StaticAndSingletons\_Classes\GATStringExtensions.cs" />
+     <Compile Include="Assets\Scripts\BeatManager.cs" />
+     <Compile Include="Assets\Scripts\RandomNotePlayer.cs" />
      <None Include="Assets\G-Audio\Scripts\Filters\Audial Manipulators - G-Audio\AboutAudial.txt" />
      <None Include="Assets\G-Audio\Examples\InitScene\InitScene_ReadMe.txt" />
      <None Include="Assets\G-Audio\Examples\_Example_05_Looper\__LooperReadme.txt" />
-     <None Include="Assets\G-Audio\__ReadMe.txt" />
      <None Include="Assets\G-Audio\NVorbis\__License.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity5.5.1p3/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
