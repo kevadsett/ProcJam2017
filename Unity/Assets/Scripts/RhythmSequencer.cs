@@ -43,6 +43,10 @@ namespace ProcJam2017
 
 		private void OnTickOccurred(float tick)
 		{
+			if (tick % 1 == 0)
+			{
+				_playNoteAction ();
+			}
 			Debug.Log (string.Format ("Current tick: {0}, next note at {1}", tick, _nextNoteTick));
 			if (tick == _nextNoteTick)
 			{
