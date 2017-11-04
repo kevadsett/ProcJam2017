@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tracks:
   - {fileID: 998204466}
+  - {fileID: 828106975}
   _FiltersHandler: {fileID: 419916595}
   _GainFilter: {fileID: 1842676274}
   _Gain: 1
@@ -280,7 +281,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SampleBank: {fileID: 1867380448}
-  BeatManager: {fileID: 1675245979}
+  Rhythms:
+  - {fileID: 11400000, guid: 5800e1a60e95741bd9c948d917307c3a, type: 2}
+  - {fileID: 11400000, guid: bbc0607dea1d246039b859716c02c94d, type: 2}
 --- !u!4 &602428549
 Transform:
   m_ObjectHideFlags: 0
@@ -294,6 +297,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &828106975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190b65fb624734e77bfcbccd76b526dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trackNb: 1
+  _filtersHandler: {fileID: 1270015175}
+  _nextMute: 0
+  _player: {fileID: 150511711}
+  _gains:
+  - 0.5
+  - 0.5
+  _stereoGain: 1
+  _stereoPan: 0.5
+  _forcePerChannelControl: 0
 --- !u!114 &998204466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +339,21 @@ MonoBehaviour:
   _stereoGain: 1
   _stereoPan: 0.5
   _forcePerChannelControl: 0
+--- !u!114 &1270015175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79e17acaa29f41b989a990ff262f6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _filters:
+  - {fileID: 1567908589}
+  _nbOfChannelsToFilter: 1
+  _selectedFilterSlot: 0
 --- !u!1 &1294860007
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +469,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1567908589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af9780d0ea2f46949bc447de0c7f1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slotIndex: 0
+  _bypass: 0
+  _threshold: 0.1
+  _mix: 1
 --- !u!1 &1675245977
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,9 +525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BPM: 90
-  BeatsPerBar: 4
   ShouldPlay: 1
-  Delay: 0.5
 --- !u!114 &1842676274
 MonoBehaviour:
   m_ObjectHideFlags: 0

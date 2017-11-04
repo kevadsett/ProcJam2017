@@ -1,53 +1,46 @@
 ﻿using System.Collections;
 using UnityEngine;
+using GAudio;
 
 public class BeatManager : MonoBehaviour
 {
 	public int BPM = 120;
 
-	public int BeatsPerBar = 4;
-
 	public bool ShouldPlay = true;
 
-	public float Delay = 0.5f;
+	private const float DELAY = 0.5f;
 
-	public delegate void BeatOccurredAction(int beatNumber, int barNumber);
-	public static event BeatOccurredAction OnCrotchetOccurred;
+	public delegate void TickOccurredAction(float tick);
+	public static event TickOccurredAction OnTickOccurred;
 
-	private const float DIVISOR = 8f;
-	private float _tickCount = 1f;
-
-	private int _barCount = 1;
+	private const float DIVISOR = 32f;
+	private float _tickCount = 0f;
 
 	void Start ()
 	{
-		StartCoroutine (DoBeat ());
+		StartCoroutine (StartTicking ());
 	}
 
-	private IEnumerator DoBeat()
+	void OnDestroy()
 	{
-		yield return new WaitForSeconds (Delay);
+		StopAllCoroutines ();
+	}
+
+	private IEnumerator StartTicking()
+	{
+		yield return new WaitForSeconds (DELAY);
 		while (true)
 		{
 			if (ShouldPlay)
 			{
-				Debug.Log ("[" + _barCount + ": " + _tickCount + "]");
-				if (_tickCount % 1 == 0)
+				if (OnTickOccurred != null)
 				{
-					if (OnCrotchetOccurred != null)
-					{
-						OnCrotchetOccurred ((int)_tickCount, _barCount);
-					}
+					OnTickOccurred (_tickCount);
 
 				}
 				_tickCount += (1 / DIVISOR);
-				if (_tickCount == BeatsPerBar + 1)
-				{
-					_tickCount = 1f;
-					_barCount++;
-				}
 			}
-			yield return new WaitForSeconds (60f / (float)BPM / DIVISOR);
+			yield return new WaitForSeconds (60f / (float)BPM / DIVISOR * 4); // because a whole note (semibreve) is 4 beats
 		}
 	}
 }

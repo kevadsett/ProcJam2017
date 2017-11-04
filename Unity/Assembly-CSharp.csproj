@@ -182,6 +182,8 @@
      <Compile Include="Assets\G-Audio\Scripts\StaticAndSingletons\_Classes\GATStringExtensions.cs" />
      <Compile Include="Assets\Scripts\BeatManager.cs" />
      <Compile Include="Assets\Scripts\RandomNotePlayer.cs" />
+     <Compile Include="Assets\Scripts\RhythmSequencer.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\RhythmDefinition.cs" />
      <None Include="Assets\G-Audio\Scripts\Filters\Audial Manipulators - G-Audio\AboutAudial.txt" />
      <None Include="Assets\G-Audio\Examples\InitScene\InitScene_ReadMe.txt" />
      <None Include="Assets\G-Audio\Examples\_Example_05_Looper\__LooperReadme.txt" />

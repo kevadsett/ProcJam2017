@@ -1,32 +1,43 @@
 ﻿using UnityEngine;
 using GAudio;
+using System.Collections.Generic;
 
-public class RandomNotePlayer : MonoBehaviour
+namespace ProcJam2017
 {
-	public GATSampleBank SampleBank;
-
-	public BeatManager BeatManager;
-
-	private string[] _sampleNames
+	public class RandomNotePlayer : MonoBehaviour
 	{
-		get {
-			return SampleBank.AllSampleNames;
+		public GATSampleBank SampleBank;
+
+		public List<RhythmDefinition> Rhythms;
+
+		public RhythmSequencer Sequencer;
+
+		private string[] _sampleNames
+		{
+			get {
+				return SampleBank.AllSampleNames;
+			}
 		}
-	}
 
-	void OnEnable ()
-	{
-		BeatManager.OnCrotchetOccurred += OnBeatOccurred;
-	}
+		void Start()
+		{
+			if (Rhythms.Count == 0)
+			{
+				Debug.LogError ("Need to specify at least one rhythm");
+			}
+			Sequencer = new RhythmSequencer (Rhythms[Random.Range(0, Rhythms.Count)], PlayNote, false, OnSequenceFinished);
+		}
 
-	void Disable()
-	{
-		BeatManager.OnCrotchetOccurred -= OnBeatOccurred;
-	}
+		void PlayNote ()
+		{
+			GATData sampleData = SampleBank.GetAudioData (_sampleNames [Random.Range(0, _sampleNames.Length)]);
+			GATManager.DefaultPlayer.PlayData (sampleData, 0, 0.2f);
+		}
 
-	void OnBeatOccurred (int beatCount, int barCount)
-	{
-		GATData sampleData = SampleBank.GetAudioData (_sampleNames [Random.Range(0, _sampleNames.Length)]);
-		GATManager.DefaultPlayer.PlayData (sampleData, 0, 0.2f);
+		void OnSequenceFinished(float nextTick)
+		{
+			Sequencer.ChangeRhythm (Rhythms[Random.Range(0, Rhythms.Count)], false, nextTick);
+
+		}
 	}
 }
