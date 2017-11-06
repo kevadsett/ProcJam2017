@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
-
-namespace ProcJam2017
+﻿namespace ProcJam2017
 {
 	public enum eNoteLength
 	{
@@ -16,16 +13,12 @@ namespace ProcJam2017
 		SemiQuaver = 2
 	}
 
-
-	[CreateAssetMenu(menuName = "Music/RhythmDefinition")]
-	public class RhythmDefinition : ScriptableObject
+	public static class NoteLength
 	{
 		public static float GetValue(eNoteLength noteLength)
 		{
 			return (float)noteLength / 32f;
 		}
-
-		public List<eNoteLength> Notes;
 	}
-}
 
+}

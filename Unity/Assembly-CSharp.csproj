@@ -46,14 +46,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AudioSourceCollection.cs" />
      <Compile Include="Assets\Scripts\BeatManager.cs" />
      <Compile Include="Assets\Scripts\NoteDatabase.cs" />
-     <Compile Include="Assets\Scripts\RandomNotePlayer.cs" />
-     <Compile Include="Assets\Scripts\RhythmSequencer.cs" />
-     <Compile Include="Assets\Scripts\ScalePlayer.cs" />
+     <Compile Include="Assets\Scripts\NoteLength.cs" />
+     <Compile Include="Assets\Scripts\PatternGenerator.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\NoteDefinition.cs" />
-     <Compile Include="Assets\Scripts\ScriptableObjects\RhythmDefinition.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\PatternDefinition.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\ScaleDefinition.cs" />
+     <Compile Include="Assets\Scripts\Sequencer.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity.5.6.1p1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
